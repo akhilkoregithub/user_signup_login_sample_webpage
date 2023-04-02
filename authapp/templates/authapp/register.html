@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% block title %}Registration
+
+{% endblock title %}
+{% block content %}
+
+{% if form.errors %}
+    
+{% endif %}
+    
+<form action="" method="post" class="form container">
+    {% csrf_token %}
+   <!-- {% bootstrap_form form %} -->
+   <div align = 'center'>
+    <div class="form-group clearfix">
+         <label for="username" class="col-md-6 control-label text-left">Username</label>
+                <div class="col-md-6">
+                     <input name="username" type="username" class="form-control" />
+                </div>
+    </div>
+    <div class="form-group clearfix">
+         <label for="first name" class="col-md-6 control-label text-left">First Name</label>
+                <div class="col-md-6">
+                     <input name="first name" type="first name" class="form-control" />
+                </div>
+    </div>
+    <div class="form-group clearfix">
+         <label for="last name" class="col-md-6 control-label text-left">Last Name</label>
+                <div class="col-md-6">
+                     <input name="last name" type="last name" class="form-control" />
+                </div>
+    </div>
+    <div
+    <label  for="gender" class="col-md-6 control-label text-left">Gender</label><br>  
+        <div>
+	     <input type="radio" name="male" /> Male <br>  
+	     <input type="radio" name="female"/> Female <br>  
+	     <input type="radio" name="other"/> Other<br>
+        </div><br>
+    </div> 
+    <div class="form-group clearfix">
+         <label for="email address" class="col-md-6 control-label text-left">Email Address</label>
+                <div class="col-md-6">
+                     <input name="email address" type="email address" class="form-control" />
+                </div>
+    </div>
+    <div class="form-group clearfix">
+          <label for="phone" class="col-md-6 control-label text-left">Phone Number</label> 
+                <div class="col-md-6">  
+                       <input type="country code" name="country code"  value="+91" size="2" />  
+                       <input type="phone" name="phone" size="10" /> 
+                </div>
+    </div>
+    <div class="form-group clearfix">
+         <label for="password" class="col-md-6 control-label text-left">Password</label>
+                <div class="col-md-6">
+                     <input name="password" type="password" class="form-control" />
+                </div>
+    </div>
+    <div class="form-group clearfix">
+         <label for="repeat password" class="col-md-6 control-label text-left">Repeat Password</label>
+                <div class="col-md-6">
+                     <input name="repeat password" type="repeat password" class="form-control" />
+          </div>
+    </div>
+    {% buttons %}
+    <button style= "width:220px" type="submit" class="btn btn-primary">Submit</button>
+    {% endbuttons %}
+    </div>
+</form>
+
+
+{% endblock content %}

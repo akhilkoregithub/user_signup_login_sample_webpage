@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock title %}
+{% block content %}
+<br><br>
+<div align="center"> 
+<h1>{{welcome}}</h1>
+</div>
+<br> 
+<div align="center"> 
+<h2 style = 'bg-color:orange'>change your account details?</h2>
+</div>
+<br>
+<div align="center"> 
+<a href="{% url 'authapp:edit' %}" class="btn btn-primary">Edit Your Profile</a> or
+<a href="{% url 'authapp:password_change' %}" class="btn btn-warning">Change your password</a>
+</div>
+<hr>
+{% endblock content %}
+

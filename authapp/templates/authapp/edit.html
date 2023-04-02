@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% block title %}Edit{% endblock title %}
+{% block content %}
+<div align = "center">
+<h2>Edit your account</h2>
+<p>You can edit your account using the follow form</p>
+<form action="" method="post" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+   
+    {% buttons %}
+    <button style= "width:220px" type="submit" class="btn btn-primary">Submit</button>
+    {% endbuttons %}
+</form>
+</div>
+{% endblock content %}
